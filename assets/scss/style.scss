@@ -4,36 +4,32 @@
 
 // Custom Buttons
 .btn {
-  padding: 13px 15px;
-  max-width: 173px;
-  width: 100%;
-  border-radius: 3px;
+  border: none;
+  border-radius: 6px;
   font-size: 16px;
-  font-weight: bold;
-  line-height: 1.5;
+  font-weight: 500;
+  line-height: 26px;
 }
 .btn-normal{
   color: $primary-color;
 }
-.btn-click{
-
-}
 
 .btn-orange {
+  padding: 18px 32px;
+  max-width: 160px;
   background-color: $primary-color;
-  border: 1px solid transparent;
   color: #fff;
 }
 
 // Style classes
-.display-flex{
-  display: flex;
+.color-orange{
+  color: $orange;
 }
-.position-absolute{
-  position: absolute;
+.color-dark_blue {
+  color: $dark_blue;
 }
-.position-relative{
-  position: relative;
+.color-second{
+  color: $font-color1;
 }
 
 // Custom Color Classes
@@ -61,7 +57,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: white;
+  background: transparent;
   z-index: $z-header;
   // box-shadow: 0 3px 8px rgba($dark, 0.2);
   &-nav {
@@ -74,20 +70,15 @@
       margin-right: 30px;
     }
     .social-icons{
-      width: 243px;
-      margin: auto;
-      i {
-        color: rgba(255,255,255,0.5
-        );
-        padding: 5px;
-        background: rgba(0, 0, 0, 0.2);
-        border-radius: 5px;
-        margin: 0 5px;
-        transition: color .3s ease-in-out;
-        &:hover{
-          cursor: pointer;
-          color: rgba(255,255,255,1);
-        }
+      margin: 5px;
+      margin-left: 22px;
+      &::before{
+        content: "";
+        position: absolute;
+        height: 16px;
+        margin-left: -15px;
+        margin-top: 5px;
+        border: 0.4px solid #C4C4C4;
       }
     }
   }
@@ -115,12 +106,26 @@
     @include menuEffect($yellow);
     @include menuHover2();
     a {
-      color: $font-color;
+      color: $font-color1;
       font-size: 14px;
       font-weight: 500;
       line-height: 24px;
       transition: color .3s ease-in-out;
     }
+  }
+  .social-icon {
+    text-decoration: none;
+    margin: 5px;
+    
+    svg path {
+      transition: fill .3s ease-in-out;
+    }
+    &:hover {
+      svg path {
+        fill: $primary-color;
+      }
+    }
+
   }
   @include mq('tablet-wide') {
     .hamburger {
@@ -197,19 +202,37 @@
   }
 }
 
-main{
-  height: calc(100vh - 41px);
-}
-
 // Footer 
 .footer {
-  background: $dark-light;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: transparent;
   &-content {
     padding: 45px 15px 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 30px;
+  }
+  .footer-link{
+    color: $font-color2;
+    margin: 12px;
+    font-size: 12px;
+    &a{
+      cursor: pointer;
+    }
+  }
+  p.footer-link{
+    margin-left: 20px;
+  }
+  p.footer-link::before{
+    content: "";
+    position: absolute;
+    height: 14px;
+    margin-left: -15px;
+    border: 0.4px solid #C4C4C4;
   }
   &-link {
     display: inline-flex;
@@ -231,8 +254,8 @@ main{
   }
   &-copyright {
     padding: 8px 10px;
-    background: #0C0E11;
-    text-align: center;
+    background:transparent;
+    justify-content: space-between;
   }
   @include mq('tablet') {
     &-content {
@@ -257,4 +280,102 @@ main{
 @keyframes zoomInOut {
   from { transform: rotate(-10deg); } 
   to { transform: rotate(10deg); }
+}
+
+.home {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: no-repeat 90.3% 0% url("../images/home-bk-pattern1.png"), 
+              no-repeat 107% -110px url("../images/home-bk-pattern2.png");
+
+  &::after {
+    position: absolute;
+    content: '';
+    right: 0;
+    bottom: 50px;
+    width: 300px;
+    height: 800px;
+    background: no-repeat bottom left url('../images/home-bk-pattern3.png');
+    background-size: contain;
+    z-index: 1;
+  }
+  .container {
+    gap: 30px;
+  }
+  &-left {
+    max-width: 520px;
+    width: 100%;
+  }
+  &-right {
+    position: relative;
+    width: 100%;
+  }
+  .person {
+    position: absolute;
+    padding: 20px;
+    width: 200px;
+    height: 120px;
+    background: white;
+    box-shadow: 0px 4px 15px rgba(230, 230, 230, 0.3);
+    border-radius: 8px;
+    z-index: 2;
+    &-avatar {
+      margin-right: 16px;
+      width: 40px;
+      height: 40px;
+      background: no-repeat center url('../images/avatar-1.png');
+      background-size: cover;
+      border: 50%;
+    }
+    &-name {
+      margin-bottom: 6px;
+      color: $dark_blue;
+      font-size: 12px; 
+      line-height: 1;
+    }
+    span {
+      color: $font-color2;
+      font-size: 10px;
+      letter-spacing: -0.5px;
+      font-weight: 300;
+    }
+    &-address {
+      font-style: italic;
+    }
+    &-info {
+      margin: 10px 0;
+    } 
+    .btn-person_story {
+      color: $primary-color;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+  }
+  #person1 {
+    top: 0;
+    left: 0;
+  }
+  #person2 {
+    top: -80px;
+    left: 232px;
+  }
+  #person3 {
+    top: 10px;
+    left: 445px;
+  }
+  #person4 {
+    top: 200px;
+    left: -36px;
+  }
+  #person5 {
+    top: 343px;
+    left: 12px;
+  }
+  #person6 {
+    top: 335px;
+    left: 260px;
+  }
 }

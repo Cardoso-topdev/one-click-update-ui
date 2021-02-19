@@ -11,7 +11,7 @@
 }
 
 @mixin heading1() {
-  font-size: 48px;
+  font-size: 60px;
   @include mq('tablet') {
     font-size: 54px;
   }
