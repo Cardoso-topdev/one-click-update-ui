@@ -379,3 +379,121 @@
     left: 260px;
   }
 }
+
+.experiences{
+  background-color: white;
+  background-image: url('../images/home_bk.png');
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: auto 90%;
+  position: relative;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  .bk-img{
+    position: absolute;
+  }
+  .content{
+    &-left {
+      max-width: 520px;
+      width: 100%;
+      margin: auto 50px auto 0;
+    }
+    &-right {
+      position: relative;
+      width: 100%;
+    }
+  }
+  .card{
+    width: 318px;
+    height: 427px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    margin: 20px;
+    .img-wrapper{
+      width: 294px;
+      height: 200px;
+      margin: 12px;
+      position: relative;
+      p{
+        position: absolute;
+        left: 16px;
+      }
+      .transparency{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+        border-radius: 8px;
+      }
+    }
+    &-img__desc1{
+      bottom: 46px;
+      margin-bottom: 0px;
+      text-transform: uppercase;
+      color: $light-orange;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+    &-img__desc2{
+      bottom: 16px;
+      margin-bottom: 0px;
+      color: white;
+      font-weight: 700;
+    }
+    &-desc-wrapper{
+      margin: 16px;
+      padding: 8px;
+      .description{
+        line-height: 16px;
+        font-size: 14px;
+        font-weight: 400;
+        color: $primary-color;
+      }
+      .tags span{
+        border-radius: 16px;
+        padding: 6px 8px;
+        background: $light-orange;
+        color: white;
+        font-size: 12px;
+      }
+      .settings{
+        margin-top: 16px;
+        justify-content: space-between;
+        color: $font-color1;
+        .type{
+          font-size: 10px;
+          line-height: 10px;
+          margin-bottom: 0px;
+        }
+        .content{
+          font-size: 14px;
+          line-height: 14px;
+          font-weight: 500;
+        }
+        &-left div{
+          margin-top: 5px;
+        }
+        .exp-tip{
+          margin-left: 5px;
+          cursor: pointer;
+        }
+      }
+      .actions{
+        justify-content: space-between;
+        margin-top: 15px;
+        .btn-view{
+          color: $light-orange;
+        }
+        .arrow{
+          margin: auto 10px;
+          &:hover{
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

@@ -6,6 +6,7 @@ body {
   color: $font-color2;
   font-family: 'Rubik', sans-serif;
   overflow-x: hidden;
+  cursor: default;
   &::-webkit-scrollbar {
     width: 3px;
   }

@@ -5,7 +5,8 @@ body {
   background-color: #E5E5E5;
   color: #7C788A;
   font-family: 'Rubik', sans-serif;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  cursor: default; }
   html::-webkit-scrollbar,
   body::-webkit-scrollbar {
     width: 3px; }
@@ -465,5 +466,99 @@ p {
   .home #person6 {
     top: 335px;
     left: 260px; }
+
+.experiences {
+  background-color: white;
+  background-image: url("../images/home_bk.png");
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: auto 90%;
+  position: relative;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex; }
+  .experiences .bk-img {
+    position: absolute; }
+  .experiences .content-left {
+    max-width: 520px;
+    width: 100%;
+    margin: auto 50px auto 0; }
+  .experiences .content-right {
+    position: relative;
+    width: 100%; }
+  .experiences .card {
+    width: 318px;
+    height: 427px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    margin: 20px; }
+    .experiences .card .img-wrapper {
+      width: 294px;
+      height: 200px;
+      margin: 12px;
+      position: relative; }
+      .experiences .card .img-wrapper p {
+        position: absolute;
+        left: 16px; }
+      .experiences .card .img-wrapper .transparency {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 8px; }
+    .experiences .card-img__desc1 {
+      bottom: 46px;
+      margin-bottom: 0px;
+      text-transform: uppercase;
+      color: #FF7112;
+      font-size: 12px;
+      letter-spacing: 1px; }
+    .experiences .card-img__desc2 {
+      bottom: 16px;
+      margin-bottom: 0px;
+      color: white;
+      font-weight: 700; }
+    .experiences .card-desc-wrapper {
+      margin: 16px;
+      padding: 8px; }
+      .experiences .card-desc-wrapper .description {
+        line-height: 16px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #f60; }
+      .experiences .card-desc-wrapper .tags span {
+        border-radius: 16px;
+        padding: 6px 8px;
+        background: #FF7112;
+        color: white;
+        font-size: 12px; }
+      .experiences .card-desc-wrapper .settings {
+        margin-top: 16px;
+        justify-content: space-between;
+        color: #2B2541; }
+        .experiences .card-desc-wrapper .settings .type {
+          font-size: 10px;
+          line-height: 10px;
+          margin-bottom: 0px; }
+        .experiences .card-desc-wrapper .settings .content {
+          font-size: 14px;
+          line-height: 14px;
+          font-weight: 500; }
+        .experiences .card-desc-wrapper .settings-left div {
+          margin-top: 5px; }
+        .experiences .card-desc-wrapper .settings .exp-tip {
+          margin-left: 5px;
+          cursor: pointer; }
+      .experiences .card-desc-wrapper .actions {
+        justify-content: space-between;
+        margin-top: 15px; }
+        .experiences .card-desc-wrapper .actions .btn-view {
+          color: #FF7112; }
+        .experiences .card-desc-wrapper .actions .arrow {
+          margin: auto 10px; }
+          .experiences .card-desc-wrapper .actions .arrow:hover {
+            cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */
