@@ -163,6 +163,24 @@ p {
     .max-width-initial {
       max-width: initial; } }
 
+.social-icons {
+  margin: 5px;
+  margin-left: 22px; }
+  .social-icons::before {
+    content: "";
+    position: absolute;
+    height: 16px;
+    margin-left: -15px;
+    margin-top: 5px;
+    border: 0.4px solid #C4C4C4; }
+  .social-icons .social-icon {
+    text-decoration: none;
+    margin: 5px; }
+    .social-icons .social-icon svg path {
+      transition: fill .3s ease-in-out; }
+    .social-icons .social-icon:hover svg path {
+      fill: #f60; }
+
 .header {
   position: fixed;
   padding: 20px 0;
@@ -183,16 +201,6 @@ p {
     .header-nav .btn-logo {
       margin: auto;
       margin-right: 30px; }
-    .header-nav .social-icons {
-      margin: 5px;
-      margin-left: 22px; }
-      .header-nav .social-icons::before {
-        content: "";
-        position: absolute;
-        height: 16px;
-        margin-left: -15px;
-        margin-top: 5px;
-        border: 0.4px solid #C4C4C4; }
   .header .nav-items {
     display: flex;
     position: fixed;
@@ -245,13 +253,6 @@ p {
       font-weight: 500;
       line-height: 24px;
       transition: color .3s ease-in-out; }
-  .header .social-icon {
-    text-decoration: none;
-    margin: 5px; }
-    .header .social-icon svg path {
-      transition: fill .3s ease-in-out; }
-    .header .social-icon:hover svg path {
-      fill: #f60; }
   @media only screen and (min-width: 992px) {
     .header .hamburger {
       display: none; }
@@ -385,6 +386,31 @@ p {
       padding: 80px 15px 45px;
       flex-direction: row; } }
 
+.footer2 {
+  height: 272px;
+  background: #2B2541; }
+  .footer2 .container {
+    text-align: center; }
+  .footer2-logo {
+    padding: 48px 0 40px 0; }
+  .footer2 .top {
+    padding-bottom: 40px;
+    border-bottom: 0.6px solid #3D3B46; }
+    .footer2 .top div {
+      justify-content: space-around; }
+    .footer2 .top a {
+      color: #E5E5E5; }
+  .footer2 .bottom {
+    color: #E5E5E5;
+    justify-content: space-between;
+    margin-top: 20px; }
+    .footer2 .bottom .social-icons .social-icon {
+      margin: 10px; }
+    .footer2 .bottom .social-icons path {
+      fill: #E5E5E5; }
+    .footer2 .bottom .social-icons::before {
+      display: none; }
+
 .overlay {
   position: fixed;
   top: 0;
@@ -437,9 +463,20 @@ p {
       margin-right: 16px;
       width: 40px;
       height: 40px;
-      background: no-repeat center url("../images/avatar-1.png");
       background-size: cover;
       border: 50%; }
+      .home .person-avatar.avatar1 {
+        background: no-repeat center url("../images/avatar-2.png"); }
+      .home .person-avatar.avatar2 {
+        background: no-repeat center url("../images/avatar-1.png"); }
+      .home .person-avatar.avatar3 {
+        background: no-repeat center url("../images/avatar-3.png"); }
+      .home .person-avatar.avatar4 {
+        background: no-repeat center url("../images/avatar-4.png"); }
+      .home .person-avatar.avatar5 {
+        background: no-repeat center url("../images/avatar-5.png"); }
+      .home .person-avatar.avatar6 {
+        background: no-repeat center url("../images/avatar-6.png"); }
     .home .person-name {
       margin-bottom: 6px;
       color: #2B2541;
@@ -648,7 +685,7 @@ p {
       border: 1px solid #EDEDED;
       transition: 0.5s ease-in-out; }
       .contact .content-right form select:focus {
-        border: 1px solid #FF6600; }
+        border: 1px solid #f60; }
     .contact .content-right form p {
       font-size: 14px;
       font-weight: 500;
@@ -664,7 +701,7 @@ p {
       border: 1px solid #EDEDED;
       transition: 0.5s ease-in-out; }
       .contact .content-right form input:focus {
-        border: 1px solid #FF6600; }
+        border: 1px solid #f60; }
     .contact .content-right form textarea {
       width: 100%;
       height: 150px;
@@ -674,7 +711,7 @@ p {
       transition: 0.5s ease-in-out;
       margin-bottom: 20px; }
       .contact .content-right form textarea:focus {
-        border: 1px solid #FF6600; }
+        border: 1px solid #f60; }
     .contact .content-right form button {
       width: 100%;
       max-width: unset; }
@@ -699,10 +736,10 @@ p {
       transition: 0.3s;
       font-size: 14px; }
       .terms .tab .tablinks:hover {
-        color: #FF6600; }
+        color: #f60; }
       .terms .tab .tablinks.active {
-        color: #FF6600;
-        border-right: 4px solid #FF6600; }
+        color: #f60;
+        border-right: 4px solid #f60; }
   .terms .right-panel {
     padding: 0px 12px 0 60px;
     border-left: 1px solid #ccc;
@@ -724,6 +761,18 @@ p {
     .terms .right-panel h4 {
       font-family: Rubik;
       font-size: 20px; }
+    .terms .right-panel .action-btns {
+      margin-bottom: 100px;
+      width: 250px;
+      justify-content: space-between; }
+      .terms .right-panel .action-btns #term_next path {
+        transition: all 0.3s ease-in-out; }
+      .terms .right-panel .action-btns #term_next:hover path {
+        fill: black; }
+      .terms .right-panel .action-btns .btn.disable {
+        color: #7C788A;
+        background: #EFEFEF;
+        cursor: default; }
 
 .coach {
   background-color: white;
@@ -781,25 +830,156 @@ p {
         color: #2B2541;
         margin: 16px 0 8px 0; }
   .coach section.desc {
-    background-image: url("../images/section2-bk.png"); }
-    .coach section.desc .part1 .img1 {
+    background-image: url("../images/section2-bk.png");
+    background-size: cover; }
+    .coach section.desc .img1, .coach section.desc .img2 {
       border-radius: 20px;
-      transform: translate(0, -50px); }
-      .coach section.desc .part1 .img1::before {
-        content: "";
-        width: 161px;
-        height: 356px;
-        background-image: url(../images/adver2-bk.png); }
-    .coach section.desc .part1 .right {
-      margin: 100px 50px; }
-    .coach section.desc .part1 h2 {
+      z-index: 1;
+      object-fit: cover;
+      width: 350px;
+      height: 447px; }
+    .coach section.desc h2 {
       font-family: Avenir Next;
       font-size: 30px;
       font-weight: 700;
       line-height: 44px;
       letter-spacing: -0.02em;
       color: #2B2541; }
-    .coach section.desc .part1 p {
-      white-space: pre-line; }
+    .coach section.desc .part1 {
+      padding-right: 50px; }
+      .coach section.desc .part1 .img1 {
+        transform: translate(0, -50px); }
+      .coach section.desc .part1 .img-bk {
+        position: absolute;
+        margin-left: -100px;
+        margin-top: 150px; }
+      .coach section.desc .part1 .right {
+        position: relative;
+        margin: 100px 50px; }
+        .coach section.desc .part1 .right img {
+          margin: 10px 0 -4px -6px; }
+      .coach section.desc .part1 p {
+        white-space: pre-line; }
+    .coach section.desc .part2 {
+      position: relative;
+      padding-left: 50px;
+      margin-top: 100px; }
+      .coach section.desc .part2 h2 {
+        color: #f60;
+        margin-bottom: 35px; }
+      .coach section.desc .part2 h3 {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 30px;
+        color: #2B2541;
+        position: relative; }
+        .coach section.desc .part2 h3::before {
+          content: "";
+          width: 24px;
+          height: 4px;
+          margin-left: -30px;
+          display: inline-block;
+          background: url(../images/minus.png);
+          background-repeat: no-repeat;
+          margin-right: 6px;
+          position: absolute;
+          top: 13px; }
+      .coach section.desc .part2 .img2 {
+        transform: translate(0, 50px); }
+      .coach section.desc .part2 .left {
+        position: relative; }
+      .coach section.desc .part2 .img-bk {
+        position: absolute;
+        top: -50px;
+        right: -90px; }
+  .coach .current {
+    margin-bottom: 100px; }
+    .coach .current h2.title {
+      margin: auto;
+      font-family: Avenir Next;
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 58px;
+      letter-spacing: -0.02em;
+      color: #2B2541;
+      position: relative;
+      margin-bottom: 100px; }
+      .coach .current h2.title::before {
+        content: "";
+        width: 32px;
+        height: 16px;
+        display: inline-block;
+        background: url(../images/coach-tick.png);
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 230px;
+        top: -7px; }
+    .coach .current-coach {
+      margin-bottom: 50px; }
+      .coach .current-coach div {
+        padding: 10px 0; }
+      .coach .current-coach .item {
+        box-shadow: 0px 4px 15px #e0e0e0;
+        border-radius: 100px;
+        height: 162px;
+        width: 465px;
+        padding: 32px; }
+      .coach .current-coach img {
+        width: 100px;
+        height: 100px;
+        margin-right: 28px; }
+      .coach .current-coach .job {
+        font-size: 10px;
+        line-height: 10px;
+        letter-spacing: 1px;
+        color: #2B2541; }
+      .coach .current-coach h4.name {
+        font-family: Avenir Next;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: -0.02em;
+        color: #2B2541; }
+      .coach .current-coach .position {
+        font-size: 16px;
+        line-height: 26px; }
+
+.apply {
+  margin-bottom: 0;
+  background: #FFF1E7;
+  padding: 90px 0;
+  position: relative;
+  height: 312px; }
+  .apply img {
+    position: absolute;
+    bottom: 0; }
+  .apply .content {
+    position: absolute;
+    width: 100vw; }
+  .apply .container {
+    justify-content: space-between; }
+    .apply .container div {
+      margin-right: 20vw; }
+    .apply .container h2 {
+      font-family: Avenir Next;
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #2B2541; }
+    .apply .container p {
+      font-size: 16px;
+      line-height: 30px;
+      margin-top: 24px; }
+  .apply button {
+    width: 280px;
+    height: 62px;
+    max-width: unset;
+    display: block;
+    margin: auto;
+    padding: 10px; }
+    .apply button svg path {
+      transition: all 0.3s ease-in-out; }
+    .apply button:hover svg path {
+      fill: black; }
 
 /*# sourceMappingURL=style.css.map */
