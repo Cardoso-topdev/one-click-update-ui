@@ -1,6 +1,13 @@
 /**
  * This is script for index page
  */
+$(document).scroll(function() {
+  if($(window).scrollTop() > 100){
+    $($(".header")[0]).addClass("pin");
+  }else if($(window).scrollTop() < 100){
+    $($(".header")[0]).removeClass("pin");
+  }
+});
 
  $(document).ready(function() {
   // Wow init

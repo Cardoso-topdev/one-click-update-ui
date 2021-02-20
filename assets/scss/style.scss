@@ -67,7 +67,11 @@
   width: 100%;
   background: transparent;
   z-index: $z-header;
-  // box-shadow: 0 3px 8px rgba($dark, 0.2);
+  transition: 0.3s;
+  &.pin{
+    background: white;
+    box-shadow: 0 3px 8px rgba($dark, 0.2);
+  }
   &-nav {
     width: 100%;
     display: flex;
@@ -645,3 +649,162 @@
   }
 }
 //------ Contact us style end -------
+
+//----- Use of Terms style start ------
+.terms{
+  min-height: 100vh;
+  background: white;
+  padding-top: 100px;
+
+  p{
+    white-space: pre-line;
+  }
+  .tab{
+    width: 30%;
+    margin-top: 120px;
+    .tablinks {
+      display: block;
+      color: #b4b4b4;
+      padding: 0 20px;
+      margin: 10px 0;
+      width: 100%;
+      text-align: right;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 14px;
+      &:hover {
+        color: #FF6600;
+      }
+      &.active{
+        color: #FF6600;
+        border-right: 4px solid #FF6600;
+      }
+    }
+  }
+  .right-panel {
+    padding: 0px 12px 0 60px;
+    border-left: 1px solid #ccc;
+    width: 70%;
+    h1{
+      font-family: Avenir Next;
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      color: #2B2541;
+      margin-top: 50px;
+      margin-bottom: 30px;
+    }
+    p{
+      font-size: 16px;
+      line-height: 26px;
+    }
+    h3{
+      font-family: Rubik;
+      font-size: 28px;
+    }
+    h4{
+      font-family: Rubik;
+      font-size: 20px;
+    }
+  }
+}
+//----- Use of Terms style end ------
+
+.coach{
+  background-color: white;
+  min-height: 100vh; 
+  background-image: url("../images/adver1.png"),
+              url("../images/adver1-bk.png");
+  background-repeat: no-repeat;
+  background-position: 100% 160px, 100% 0%;
+  background-size: 300px auto, 500px auto;
+  section{
+    margin-bottom: 200px;
+  }
+  .passion{
+    padding-top: 200px;
+    position: relative;
+    .content{
+      width: 700px;
+      button{
+        width: 254px;
+        max-width: unset;
+      }
+      h1.title{
+        font-weight: 700;
+        color: $font-color1;
+      }
+      p{
+        font-size: 20px;
+        margin: 20px 0;
+      }
+    }
+    .card{
+      width: 173px;
+      height: 184px;
+      padding: 14px;
+      border-radius: 8px;
+      text-align: center;
+      position: absolute;
+      top: 365px;
+      right: 15vw;
+      box-shadow: 0px 4px 15px rgba(230, 230, 230, 0.3);
+      p{
+        margin-bottom: 0;
+      }
+      img{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin: auto;
+      }
+      .job{
+        font-size: 10px;
+        color: #2B2541;
+        margin-top: 10px;
+      }
+      .name{
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 12px;
+        color: #2B2541;
+        margin-top: 8px;
+      }
+      .position{
+        font-size: 10px;
+        line-height: 10px;
+        color: #2B2541;
+        margin: 16px 0 8px 0;
+      }
+    }
+  }
+  section.desc{
+    background-image: url("../images/section2-bk.png");
+    .part1{
+      .img1{
+        border-radius: 20px;
+        transform: translate(0, -50px);
+        &::before{
+          content: "";
+          width: 161px;
+          height: 356px;
+          background-image: url(../images/adver2-bk.png);
+        }
+      }
+      .right{
+        margin: 100px 50px;
+      }
+      h2{
+        font-family: Avenir Next;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 44px;
+        letter-spacing: -0.02em;
+        color: #2B2541;
+      }
+      p{
+        white-space: pre-line;
+      }
+    }
+  }
+}
