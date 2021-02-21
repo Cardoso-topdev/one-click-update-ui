@@ -24,15 +24,15 @@ $(document).scroll(function() {
     }
   });
   // Header menu
-  $('.header .nav-link').click(function(e) {
-    e.preventDefault();
-    let target = $(this).attr('href');
-    $('html').animate({
-      scrollTop: $(target).offset().top
-    }, 800); 
-    let width = $(window).width();
-    if ( width < 992) {
-      $('.hamburger').trigger('click');
-    }
-  });
+  // $('.header .nav-link').click(function(e) {
+  //   e.preventDefault();
+  //   let target = $(this).attr('href');
+  //   $('html').animate({
+  //     scrollTop: $(target).offset().top
+  //   }, 800); 
+  //   let width = $(window).width();
+  //   if ( width < 992) {
+  //     $('.hamburger').trigger('click');
+  //   }
+  // });
  });
