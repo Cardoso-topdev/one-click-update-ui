@@ -999,7 +999,7 @@
   }
 }
 .apply{
-  margin-bottom: 0;
+  margin-bottom: 0!important;
   background: #FFF1E7;
   padding: 90px 0;
   position: relative;
@@ -1009,29 +1009,26 @@
     bottom: 0;
   }
   .content{
-    position: absolute;
+    position: relative;
     width: 100vw;
   }
   .container{
-      justify-content: space-between;
-      div{
-        margin-right: 20vw;
-      }
-      h2{
-        font-family: Avenir Next;
-        font-size: 40px;
-        font-weight: 700;
-        letter-spacing: -0.02em;
-        color: $dark_blue;
-      }
-      p{
-        font-size: 16px;
-        line-height: 30px;
-        margin-top: 24px;
-      }
+    h2{
+      font-family: Avenir Next;
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: $dark_blue;
+    }
+    p{
+      font-size: 16px;
+      line-height: 30px;
+      margin-top: 24px;
+      white-space: pre-line;
+    }
   }
   button{
-    width: 280px;
+    width: 170px;
     height: 62px;
     max-width: unset;
     display: block;

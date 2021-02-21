@@ -945,7 +945,7 @@ p {
         line-height: 26px; }
 
 .apply {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
   background: #FFF1E7;
   padding: 90px 0;
   position: relative;
@@ -954,24 +954,21 @@ p {
     position: absolute;
     bottom: 0; }
   .apply .content {
-    position: absolute;
+    position: relative;
     width: 100vw; }
-  .apply .container {
-    justify-content: space-between; }
-    .apply .container div {
-      margin-right: 20vw; }
-    .apply .container h2 {
-      font-family: Avenir Next;
-      font-size: 40px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      color: #2B2541; }
-    .apply .container p {
-      font-size: 16px;
-      line-height: 30px;
-      margin-top: 24px; }
+  .apply .container h2 {
+    font-family: Avenir Next;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #2B2541; }
+  .apply .container p {
+    font-size: 16px;
+    line-height: 30px;
+    margin-top: 24px;
+    white-space: pre-line; }
   .apply button {
-    width: 280px;
+    width: 170px;
     height: 62px;
     max-width: unset;
     display: block;

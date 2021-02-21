@@ -23,7 +23,8 @@
     <div class="container">
       <nav class="header-nav">
         <div class="d-flex">
-          <a href="/" class="btn-logo"><img src="assets/images/logo-white.png" alt="Click"></a>
+          <a href="/" class="btn-logo white-logo"><img src="assets/images/logo-white.png" alt="Click"></a>
+          <a href="/" class="btn-logo block-logo"><img src="assets/images/logo.png" alt="Click"></a>
 
           <ul class="nav-items">
             <li class="nav-item">
@@ -178,6 +179,20 @@
     integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
     crossorigin="anonymous"></script>
   <script src="assets/js/script.js"></script>
+  <script>
+    $(".block-logo").css("display", "none");
+    $(document).scroll(function() {
+      if($(window).scrollTop() > 100){
+        $(".color-white").removeClass("color-white");
+        $(".white-logo").css("display", "none");
+        $(".block-logo").css("display", "block");
+      }else if($(window).scrollTop() < 100){
+        $(".nav-link").addClass("color-white");
+        $(".white-logo").css("display", "block");
+        $(".block-logo").css("display", "none");
+      }
+    });
+  </script>
   <!-- End Scripts -->
 </body>
 </html>
